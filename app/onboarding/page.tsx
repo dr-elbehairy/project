@@ -3,7 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/db/auth-context";
-import { supabase } from "@/lib/db/supabase-client";
+import { getSupabase } from "@/lib/db/supabase-client";
+
+const supabase = getSupabase();
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
